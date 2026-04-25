@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <div className='text-black text-center'>
-            <div className="title">
+            <div className="title my-12">
                 <h1 className='text-4xl font-bold'>{doc.name}</h1>
             </div>
 
@@ -21,11 +21,11 @@ const Header = () => {
 
                 </div>
 
-                <div className="link-related">
-                    <button className='bg-black text-white border-6 rounded-4xl px-5 py-2'>Paper</button>
-                    <button className='bg-black text-white border-6 rounded-4xl px-5 py-2'>arXiv</button>
-                    <button className='bg-black text-white border-6 rounded-4xl px-5 py-2'>Video</button>
-                    <button className='bg-black text-white border-6 rounded-4xl px-5 py-2'>Data</button>
+                <div className="link-related mt-12 mb-18">
+                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>Paper</button>
+                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>arXiv</button>
+                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>Video</button>
+                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>Data</button>
                 </div>
             </div>
             <div className="credibility">

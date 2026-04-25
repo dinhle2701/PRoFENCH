@@ -8,9 +8,9 @@ const Abstract = () => {
     return (
         <div className='abstract text-black my-12'>
             <h2 className='text-3xl font-bold mb-4 text-center'>Abstract</h2>
-            <span>
+            <p className='text-abstract' style={{ whiteSpace: 'pre-line', textAlign: 'justify' }}>
                 {doc.abstract}
-            </span>
+            </p>
         </div>
     )
 }
