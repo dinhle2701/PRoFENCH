@@ -7,7 +7,7 @@ const Intro = () => {
             <p>
                 Visualization of the Data of each modality and their corresponding estimations.
             </p>
-            <img src="/image/PRoFENCH.png" alt="PRoFENCH Framework" className="mx-auto mt-8" />
+            <img src="/My-Paper/image/PRoFENCH.png" alt="PRoFENCH Framework" className="mx-auto mt-8" />
             <p className='text-center'>Figure 1: Architecture of the proposed <b>PRoFENCH</b> multimodal WiFi–Vision sensing framework.</p>
         </div>
     )
