@@ -16,6 +16,7 @@ const datasets = [
         id: 1,
         name: "Counting People IR",
         cv: [
+            `${base}/datasets/Counting People IR/cv/zero-people.mp4`,
             `${base}/datasets/Counting People IR/cv/one-people.mp4`,
             `${base}/datasets/Counting People IR/cv/two-people.mp4`,
             `${base}/datasets/Counting People IR/cv/three-people.mp4`,
@@ -25,13 +26,14 @@ const datasets = [
             `${base}/datasets/Counting People IR/cv/seven-people.mp4`,
         ],
         csi: [
-            `${base}/datasets/ir/csi/1.mp4`,
-            `${base}/datasets/ir/csi/2.mp4`,
-            `${base}/datasets/ir/csi/3.mp4`,
-            `${base}/datasets/ir/csi/4.mp4`,
-            `${base}/datasets/ir/csi/5.mp4`,
-            `${base}/datasets/ir/csi/6.mp4`,
-            `${base}/datasets/ir/csi/7.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_0people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_1people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_2people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_3people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_4people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_5people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_6people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_7people.mp4`,
         ],
     },
 
@@ -157,7 +159,7 @@ const DatasetTabs = () => {
                                     {current.cv.map((video, index) => (
                                         <div key={index}>
                                             <p className="mb-2 font-medium text-sm text-center">
-                                                {index + 1} People
+                                                {index + 0} People
                                             </p>
 
                                             <video
@@ -184,7 +186,7 @@ const DatasetTabs = () => {
                                     {current.csi.map((video, index) => (
                                         <div key={index}>
                                             <p className="mb-2 font-medium text-sm text-center">
-                                                {index + 1} People
+                                                {index + 0} People
                                             </p>
 
                                             <video
