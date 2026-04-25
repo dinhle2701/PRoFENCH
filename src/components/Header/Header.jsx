@@ -7,12 +7,14 @@ const Header = () => {
     return (
         <div className='text-black text-center'>
             <div className="title">
-
+                <h1 className='text-4xl font-bold'>{doc.name}</h1>
             </div>
 
             <div className="info">
                 <div className="author">
-
+                    <a href={doc.author_link} target="_blank" rel="noopener noreferrer">
+                        {doc.author}
+                    </a>
                 </div>
 
                 <div className="educate">
@@ -26,7 +28,7 @@ const Header = () => {
                     <button className='bg-black text-white border-6 rounded-4xl px-5 py-2'>Data</button>
                 </div>
             </div>
-            <div className="comment">
+            <div className="credibility">
                 <span>Accepted by NeurIPS 2023 Datasets and Benchmarks Track</span>
             </div>
         </div>

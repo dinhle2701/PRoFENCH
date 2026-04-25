@@ -4,6 +4,8 @@ import Footer from "@/components/Footer/Footer";
 import { useEffect } from "react";
 import RelatedLink from '@/components/RelatedLink/RelatedLink';
 import Citation from '@/components/Citation/Citation';
+import Intro from '@/components/Intro/Intro';
+import Abstract from '@/components/Abstract/Abstract';
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +34,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Header />
+      <Intro />
+      <Abstract />
       <RelatedLink />
       <Citation />
       <Footer />

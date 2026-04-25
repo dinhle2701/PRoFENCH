@@ -3,7 +3,7 @@
 :root {
   --background: #f3f2f241;
   --foreground: #8a8585;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -58,4 +58,12 @@ body::before {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+}
+
+
+.abstact {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
 }
