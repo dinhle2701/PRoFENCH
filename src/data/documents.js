@@ -13,7 +13,7 @@ const documents = [
     },
     {
         "name": "introduction",
-        "image": "/My-Paper/image/PRoFENCH.png"
+        "image": "/PRoFENCH/image/PRoFENCH.png"
     }
 
 ]

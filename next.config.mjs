@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   // output: 'export',
-  basePath: '/My-Paper',
+  basePath: '/PRoFENCH',
   images: {
     domains:
       [
