@@ -14,31 +14,6 @@ const base = "/PRoFENCH"
 const datasets = [
     {
         id: 1,
-        name: "Counting People IR",
-        cv: [
-            `${base}/datasets/Counting People IR/cv/zero-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/one-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/two-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/three-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/four-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/five-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/six-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/seven-people.mp4`,
-        ],
-        csi: [
-            `${base}/datasets/Counting People IR/csi/csi_0people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_1people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_2people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_3people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_4people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_5people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_6people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_7people.mp4`,
-        ],
-    },
-
-    {
-        id: 2,
         name: "Counting People RGB",
         cv: [
             `${base}/datasets/Counting People RGB/cv/zero-people.mp4`,
@@ -59,6 +34,31 @@ const datasets = [
             `${base}/datasets/Counting People RGB/csi/csi_5people.mp4`,
             `${base}/datasets/Counting People RGB/csi/csi_6people.mp4`,
             `${base}/datasets/Counting People RGB/csi/csi_7people.mp4`,
+        ],
+    },
+
+    {
+        id: 2,
+        name: "Counting People IR",
+        cv: [
+            `${base}/datasets/Counting People IR/cv/zero-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/one-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/two-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/three-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/four-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/five-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/six-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/seven-people.mp4`,
+        ],
+        csi: [
+            `${base}/datasets/Counting People IR/csi/csi_0people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_1people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_2people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_3people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_4people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_5people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_6people.mp4`,
+            `${base}/datasets/Counting People IR/csi/csi_7people.mp4`,
         ],
     },
 

@@ -4,22 +4,41 @@
   --background: #f3f2f241;
   --foreground: #8a8585;
   margin: 0 auto;
-  font-size: 20px;
 }
 
+/* =========================
+   FIX CONTAINER RESPONSIVE
+========================= */
 .container-size {
-  width: 1000px;
+  width: 100%;
+  max-width: 1100px;
+  /* giữ design desktop */
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
   line-height: 30px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================
+   BASE
+========================= */
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+  /* FIX: tránh mobile phóng to */
 }
 
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  /* FIX: chống scroll ngang */
+}
+
+/* =========================
+   DARK MODE (giữ nguyên)
+========================= */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -27,7 +46,9 @@
   }
 }
 
-/* styles.css (nếu dùng CSS tay), hoặc viết inline class vẫn được */
+/* =========================
+   REVEAL ANIMATION (GIỮ NGUYÊN)
+========================= */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -39,82 +60,49 @@
   transform: translateY(0);
 }
 
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* styles/globals.css */
+/* =========================
+   BACKGROUND FIX (KHÔNG BỂ MOBILE)
+========================= */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  /* background: url('../../public/mountain-night-forest-landscape-with-moon-and-stars-vector.jpg') no-repeat center center / cover; */
+  inset: 0;
   background-color: white;
-  color: #000000;
   z-index: -1;
 }
 
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-.intro {
-  font-size: 16px;
-}
-
+/* =========================
+   FIX ABSTRACT RESPONSIVE
+========================= */
 .abstract {
-  font-size: 16px;
-  width: 850px;
+  width: 100%;
+  max-width: 850px;
+  /* giữ desktop design */
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
 }
 
-.sensor-platform {
-  margin-top: 80px;
-  font-size: 16px;
-}
-
-.methodology {
-  margin-top: 80px;
-  font-size: 16px;
-}
-
-.experiment {
-  margin-top: 80px;
-  font-size: 16px;
-  color: black;
-}
-
-.related-links {
-  margin-top: 80px;
-  font-size: 16px;
-  color: black;
-}
-
-.license {
-  margin-top: 80px;
-  font-size: 16px;
-  color: black;
-}
-
+/* =========================
+   SECTION SPACING (GIỮ NGUYÊN STYLE)
+========================= */
+.sensor-platform,
+.methodology,
+.experiment,
+.related-links,
+.license,
 .citation {
   margin-top: 80px;
-  font-size: 16px;
-  color: black;
+  font-size: 18px;
 }
 
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  height: 250px;
+  height: auto;
   text-align: center;
   padding: 20px;
-  font-size: 16px;
+  font-size: 18px;
   background: #e6e6e69a;
 }
