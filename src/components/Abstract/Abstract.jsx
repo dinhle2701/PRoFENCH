@@ -6,8 +6,8 @@ const Abstract = () => {
 
 
     return (
-        <div className='abstract text-black my-12'>
-            <h2 className='text-3xl font-bold mb-4 text-center'>Abstract</h2>
+        <div className='abstract container-size text-black mt-12 mb-12 text-center'>
+            <h2 className='text-2xl font-bold mt-8 mb-6 text-center'>Abstract</h2>
             <p className='text-abstract' style={{ whiteSpace: 'pre-line', textAlign: 'justify' }}>
                 {doc.abstract}
             </p>

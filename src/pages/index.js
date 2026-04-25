@@ -6,6 +6,8 @@ import RelatedLink from '@/components/RelatedLink/RelatedLink';
 import Citation from '@/components/Citation/Citation';
 import Intro from '@/components/Intro/Intro';
 import Abstract from '@/components/Abstract/Abstract';
+import Experiment from '@/components/Experiment/Experiment';
+import License from '@/components/License/License';
 
 export default function Home() {
   useEffect(() => {
@@ -36,7 +38,16 @@ export default function Home() {
       <Header />
       <Intro />
       <Abstract />
+
+      {/* Mục 1 */}
+
+      {/* Mục 4 */}
+
+      {/* mục 5 */}
+      <Experiment />
+
       <RelatedLink />
+      <License />
       <Citation />
       <Footer />
     </div>

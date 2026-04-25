@@ -3,9 +3,14 @@
 :root {
   --background: #f3f2f241;
   --foreground: #8a8585;
-  width: 1000px;
   margin: 0 auto;
   font-size: 20px;
+}
+
+.container-size {
+  width: 1000px;
+  margin: 0 auto;
+  line-height: 30px;
 }
 
 @theme inline {
@@ -61,26 +66,45 @@ html {
   font-size: 16px;
 }
 
+.intro {
+  font-size: 16px;
+}
 
 .abstract {
-  margin: 20px;
-  padding: 20px;
-  width: 900px;
   font-size: 16px;
+  width: 850px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
 }
 
-.abstract h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 20px;
+.experiment {
+  margin-top: 80px;
+  font-size: 16px;
+  color: black;
 }
 
-.text-abstract {
-  text-align: justify;
-  line-height: 1.8;
+.related-links {
+  margin-top: 80px;
   font-size: 16px;
-  color: #333;
-  white-space: pre-line;
+  color: black;
+}
+
+.license {
+  margin-top: 80px;
+  font-size: 16px;
+  color: black;
+}
+
+.citation {
+  margin-top: 80px;
+  font-size: 16px;
+  color: black;
+}
+
+.footer {
+  height: 250px;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  background: #e6e6e69a;
 }

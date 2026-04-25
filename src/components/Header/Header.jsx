@@ -5,20 +5,27 @@ const Header = () => {
     const doc = documents[0]
 
     return (
-        <div className='text-black text-center'>
+        <div className='text-black text-center container-size'>
             <div className="title my-12">
                 <h1 className='text-4xl font-bold'>{doc.name}</h1>
             </div>
 
             <div className="info">
                 <div className="author">
-                    <a href={doc.author_link} target="_blank" rel="noopener noreferrer">
-                        {doc.author}
-                    </a>
+                    <p className="text-center ">
+                        Tien Do<sup>a,c,d</sup>,{' '}
+                        Quan Le-Trung<sup>b,c</sup>,{' '}
+                        Phuoc Nguyen T.H.<sup>a,c,*</sup>
+                    </p>
                 </div>
 
                 <div className="educate">
-
+                    <div className="text-center mt-4 text-sm text-gray-600 leading-relaxed">
+                        <p><sup>a</sup> Faculty of Information Science and Engineering, University of Information Technology, Ho Chi Minh City, 700000, Vietnam</p>
+                        <p><sup>b</sup> Faculty of Computer Networks and Communications, University of Information Technology, Ho Chi Minh City, 700000, Vietnam</p>
+                        <p><sup>c</sup> Vietnam National University Ho Chi Minh City, Ho Chi Minh City, 700000, Vietnam</p>
+                        <p><sup>d</sup> Ho Chi Minh City University of Industry and Trade, Vietnam, Ho Chi Minh City, 700000, Vietnam</p>
+                    </div>
                 </div>
 
                 <div className="link-related mt-12 mb-18">
