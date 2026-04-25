@@ -1,35 +1,92 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from "react"
 
 const base = "/PRoFENCH"
+
+/**
+ * Mỗi TAB = 1 dataset
+ * Trong mỗi tab:
+ * - Cột trái: 7 video CV
+ * - Cột phải: 7 video CSI
+ *
+ * CHỈ CẦN THÊM LINK VIDEO VÀO ĐÂY
+ */
 
 const datasets = [
     {
         id: 1,
         name: "Counting People IR",
-        wifi: `${base}/datasets/cv/one-people.mp4`,
-        csi: `${base}/datasets/cv/one-people-csi.mp4`,
+        cv: [
+            `${base}/datasets/Counting People IR/cv/one-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/two-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/three-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/four-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/five-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/six-people.mp4`,
+            `${base}/datasets/Counting People IR/cv/seven-people.mp4`,
+        ],
+        csi: [
+            `${base}/datasets/ir/csi/1.mp4`,
+            `${base}/datasets/ir/csi/2.mp4`,
+            `${base}/datasets/ir/csi/3.mp4`,
+            `${base}/datasets/ir/csi/4.mp4`,
+            `${base}/datasets/ir/csi/5.mp4`,
+            `${base}/datasets/ir/csi/6.mp4`,
+            `${base}/datasets/ir/csi/7.mp4`,
+        ],
     },
+
     {
         id: 2,
         name: "Counting People RGB",
-        wifi: `${base}/datasets/cv/two-people.mp4`,
-        csi: `${base}/datasets/cv/two-people-csi.mp4`,
+        cv: [
+            `${base}/datasets/rgb/cv/1.mp4`,
+            `${base}/datasets/rgb/cv/2.mp4`,
+            `${base}/datasets/rgb/cv/3.mp4`,
+            `${base}/datasets/rgb/cv/4.mp4`,
+            `${base}/datasets/rgb/cv/5.mp4`,
+            `${base}/datasets/rgb/cv/6.mp4`,
+            `${base}/datasets/rgb/cv/7.mp4`,
+        ],
+        csi: [
+            `${base}/datasets/rgb/csi/1.mp4`,
+            `${base}/datasets/rgb/csi/2.mp4`,
+            `${base}/datasets/rgb/csi/3.mp4`,
+            `${base}/datasets/rgb/csi/4.mp4`,
+            `${base}/datasets/rgb/csi/5.mp4`,
+            `${base}/datasets/rgb/csi/6.mp4`,
+            `${base}/datasets/rgb/csi/7.mp4`,
+        ],
     },
+
     {
         id: 3,
         name: "Human Activity RGB",
-        wifi: `${base}/datasets/cv/three-people.mp4`,
-        csi: `${base}/datasets/cv/three-people-csi.mp4`,
+        cv: [
+            `${base}/datasets/activity/cv/1.mp4`,
+            `${base}/datasets/activity/cv/2.mp4`,
+            `${base}/datasets/activity/cv/3.mp4`,
+            `${base}/datasets/activity/cv/4.mp4`,
+            `${base}/datasets/activity/cv/5.mp4`,
+            `${base}/datasets/activity/cv/6.mp4`,
+            `${base}/datasets/activity/cv/7.mp4`,
+        ],
+        csi: [
+            `${base}/datasets/activity/csi/1.mp4`,
+            `${base}/datasets/activity/csi/2.mp4`,
+            `${base}/datasets/activity/csi/3.mp4`,
+            `${base}/datasets/activity/csi/4.mp4`,
+            `${base}/datasets/activity/csi/5.mp4`,
+            `${base}/datasets/activity/csi/6.mp4`,
+            `${base}/datasets/activity/csi/7.mp4`,
+        ],
     },
 ]
 
 const DatasetTabs = () => {
     const [activeTab, setActiveTab] = useState(1)
+    const videoRefs = useRef([])
 
-    const wifiRef = useRef(null)
-    const csiRef = useRef(null)
-
-    const current = datasets.find(d => d.id === activeTab)
+    const current = datasets.find((item) => item.id === activeTab)
 
     useEffect(() => {
         const forcePlay = (video) => {
@@ -40,7 +97,6 @@ const DatasetTabs = () => {
             video.autoplay = true
             video.loop = true
             video.playsInline = true
-            video.currentTime = 0
 
             const playVideo = () => {
                 video.play().catch(() => { })
@@ -49,44 +105,34 @@ const DatasetTabs = () => {
             playVideo()
 
             video.addEventListener("pause", playVideo)
+
             video.addEventListener("ended", () => {
                 video.currentTime = 0
                 playVideo()
             })
-
-            document.addEventListener("visibilitychange", () => {
-                if (!document.hidden) playVideo()
-            })
-
-            window.addEventListener("focus", playVideo)
         }
 
         setTimeout(() => {
-            forcePlay(wifiRef.current)
-            forcePlay(csiRef.current)
+            videoRefs.current.forEach((video) => forcePlay(video))
         }, 200)
-
     }, [activeTab])
 
     return (
-        <div className='dataset container-size text-black'>
-            <h2 className='text-2xl text-black font-bold mt-12 text-center'>
-                Dataset
-            </h2>
+        <div className="dataset container-size text-black">
+            <h2 className="text-2xl font-bold mt-12 text-center">Dataset</h2>
 
-            <div className="max-w-[1000px] mx-auto mt-10 text-center">
+            <div className="max-w-[1500px] mx-auto mt-10">
 
                 {/* Tabs */}
-                <div className="flex gap-4 border-b mb-6 justify-center">
+                <div className="flex gap-4 border-b mb-10 justify-center flex-wrap">
                     {datasets.map((tab) => (
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`pb-2 px-10 font-medium transition 
-                            hover:cursor-pointer hover:text-gray-900
-                            ${activeTab === tab.id
-                                    ? 'border-b-2 border-black text-black'
-                                    : 'text-gray-500'
+                            className={`pb-2 px-8 font-medium transition
+              ${activeTab === tab.id
+                                    ? "border-b-2 border-black text-black"
+                                    : "text-gray-500"
                                 }`}
                         >
                             {tab.name}
@@ -94,53 +140,70 @@ const DatasetTabs = () => {
                     ))}
                 </div>
 
+                {/* Current Tab */}
                 {current && (
-                    <div className="mt-6">
-                        <h3 className="text-xl font-semibold mb-4">
+                    <div>
+                        <h3 className="text-xl font-semibold text-center mb-8">
                             {current.name}
                         </h3>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                            {/* WiFi */}
+                            {/* CV COLUMN */}
                             <div>
-                                <p className="mb-2 font-medium">WiFi</p>
-                                <video
-                                    key={current.wifi}
-                                    ref={wifiRef}
-                                    src={current.wifi}
-                                    muted
-                                    autoPlay
-                                    loop
-                                    playsInline
-                                    preload="auto"
-                                    controls={false}
-                                    className="w-full h-[260px] object-cover rounded-lg shadow bg-black"
-                                />
+                                <h4 className="text-lg font-bold mb-5 text-center">CV</h4>
+
+                                <div className="space-y-5">
+                                    {current.cv.map((video, index) => (
+                                        <div key={index}>
+                                            <p className="mb-2 font-medium text-sm text-center">
+                                                {index + 1} People
+                                            </p>
+
+                                            <video
+                                                ref={(el) => (videoRefs.current[index] = el)}
+                                                src={video}
+                                                muted
+                                                autoPlay
+                                                loop
+                                                playsInline
+                                                controls={false}
+                                                preload="auto"
+                                                className="w-full h-[220px] object-cover rounded-lg shadow bg-black"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
-                            {/* CSI */}
+                            {/* CSI COLUMN */}
                             <div>
-                                <p className="mb-2 font-medium">CSI</p>
-                                <video
-                                    key={current.csi}
-                                    ref={csiRef}
-                                    src={current.csi}
-                                    muted
-                                    autoPlay
-                                    loop
-                                    playsInline
-                                    preload="auto"
-                                    controls={false}
-                                    className="w-full h-[260px] object-cover rounded-lg shadow bg-black"
-                                />
+                                <h4 className="text-lg font-bold mb-5 text-center">CSI</h4>
+
+                                <div className="space-y-5">
+                                    {current.csi.map((video, index) => (
+                                        <div key={index}>
+                                            <p className="mb-2 font-medium text-sm text-center">
+                                                {index + 1} People
+                                            </p>
+
+                                            <video
+                                                ref={(el) => (videoRefs.current[index + 7] = el)}
+                                                src={video}
+                                                muted
+                                                autoPlay
+                                                loop
+                                                playsInline
+                                                controls={false}
+                                                preload="auto"
+                                                className="w-full h-[220px] object-cover rounded-lg shadow bg-black"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
                         </div>
-
-                        <p className="text-sm text-gray-500 mt-4">
-                            {current.description}
-                        </p>
                     </div>
                 )}
             </div>
