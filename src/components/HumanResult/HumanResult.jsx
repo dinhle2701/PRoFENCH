@@ -1,13 +1,99 @@
-import React from 'react'
+import React, { useState, useEffect } from "react"
+import { datasets } from "@/data/datasets"
+
 
 const HumanResult = () => {
+    const [activeTab, setActiveTab] = useState(1)
+    const [selectedIndex, setSelectedIndex] = useState(0)
+
+    const current = datasets.find((item) => item.id === activeTab)
+
+    // reset dropdown khi đổi tab
+    useEffect(() => {
+        setSelectedIndex(0)
+    }, [activeTab])
+
     return (
-        <div className='human-result container-size'>
-            <h2 className='text-2xl text-black font-bold'>Human Pose Estimation Result</h2>
+        <div className="dataset container-size text-black">
+            <h2 className="text-2xl font-bold mt-12 text-center">
+                Human Pose Estimation Result
+            </h2>
 
-            <h3 className='text-lg font-bold my-3 text-black'>Visualization of the human pose estimation result</h3>
+            <div className="max-w-[1200px] mx-auto mt-10">
 
-            <p>We provide the human pose estimation result of each modality in the frame level.</p>
+                {/* Tabs */}
+                <div className="flex gap-4 border-b mb-8 justify-center flex-wrap">
+                    {datasets.map((tab) => (
+                        <button
+                            key={tab.id}
+                            onClick={() => setActiveTab(tab.id)}
+                            className={`pb-2 px-6 font-medium transition
+                                ${activeTab === tab.id
+                                    ? "border-b-2 border-black text-black"
+                                    : "text-gray-500"
+                                }`}
+                        >
+                            {tab.name}
+                        </button>
+                    ))}
+                </div>
+
+                {current && (
+                    <div className="flex flex-col items-center gap-6">
+
+                        {/* Title */}
+                        <h3 className="text-xl font-semibold text-center">
+                            {current.name}
+                        </h3>
+
+                        {/* Dropdown */}
+                        <select
+                            value={selectedIndex}
+                            onChange={(e) => setSelectedIndex(Number(e.target.value))}
+                            className="border border-none px-2 py-2 rounded-md  text-sm text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition
+                            hover:cursor-pointer"
+                        >
+                            {current.cv.map((_, index) => (
+                                <option key={index} value={index} className="text-left">
+                                    {current.labels?.[index] ?? `${index} VOLUNTEERS`}
+                                </option>
+                            ))}
+                        </select>
+
+                        {/* Video pair */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-4">
+
+                            {/* CV */}
+                            <div className="text-center">
+                                <h4 className="font-bold mb-3">CV</h4>
+                                <video
+                                    src={current.cv[selectedIndex]}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-[320px] object-cover rounded-lg shadow bg-black"
+                                />
+                            </div>
+
+                            {/* CSI */}
+                            <div className="text-center">
+                                <h4 className="font-bold mb-3">CSI</h4>
+                                <video
+                                    src={current.csi[selectedIndex]}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-[320px] object-cover rounded-lg shadow bg-black"
+                                />
+                            </div>
+
+                        </div>
+                    </div>
+                )}
+
+            </div>
         </div>
     )
 }

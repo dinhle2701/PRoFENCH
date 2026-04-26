@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react"
-
-const base = "/PRoFENCH"
+import { datasets } from "@/data/datasets"
 
 /**
  * Mỗi TAB = 1 dataset
@@ -11,76 +10,7 @@ const base = "/PRoFENCH"
  * CHỈ CẦN THÊM LINK VIDEO VÀO ĐÂY
  */
 
-const datasets = [
-    {
-        id: 1,
-        name: "Counting People RGB",
-        cv: [
-            `${base}/datasets/Counting People RGB/cv/zero-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/one-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/two-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/three-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/four-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/five-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/six-people.mp4`,
-            `${base}/datasets/Counting People RGB/cv/seven-people.mp4`,
-        ],
-        csi: [
-            `${base}/datasets/Counting People RGB/csi/csi_0people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_1people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_2people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_3people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_4people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_5people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_6people.mp4`,
-            `${base}/datasets/Counting People RGB/csi/csi_7people.mp4`,
-        ],
-    },
 
-    {
-        id: 2,
-        name: "Counting People IR",
-        cv: [
-            `${base}/datasets/Counting People IR/cv/zero-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/one-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/two-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/three-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/four-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/five-people.mp4`,
-        ],
-        csi: [
-            `${base}/datasets/Counting People IR/csi/csi_0people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_1people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_2people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_3people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_4people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_5people.mp4`,
-        ],
-    },
-
-    {
-        id: 3,
-        name: "Human Activity RGB",
-        cv: [
-            `${base}/datasets/activity/cv/1.mp4`,
-            `${base}/datasets/activity/cv/2.mp4`,
-            `${base}/datasets/activity/cv/3.mp4`,
-            `${base}/datasets/activity/cv/4.mp4`,
-            `${base}/datasets/activity/cv/5.mp4`,
-            `${base}/datasets/activity/cv/6.mp4`,
-            `${base}/datasets/activity/cv/7.mp4`,
-        ],
-        csi: [
-            `${base}/datasets/activity/csi/1.mp4`,
-            `${base}/datasets/activity/csi/2.mp4`,
-            `${base}/datasets/activity/csi/3.mp4`,
-            `${base}/datasets/activity/csi/4.mp4`,
-            `${base}/datasets/activity/csi/5.mp4`,
-            `${base}/datasets/activity/csi/6.mp4`,
-            `${base}/datasets/activity/csi/7.mp4`,
-        ],
-    },
-]
 
 const DatasetTabs = () => {
     const [activeTab, setActiveTab] = useState(1)
@@ -168,7 +98,7 @@ const DatasetTabs = () => {
                                                 className="w-full h-[220px] object-cover rounded-lg shadow bg-black"
                                             />
                                             <p className="mb-2 font-medium text-sm text-center">
-                                                {index + 0} Volunteers
+                                                {current.labels?.[index] ?? `${index} VOLUNTEERS`}
                                             </p>
                                         </div>
                                     ))}
@@ -195,7 +125,7 @@ const DatasetTabs = () => {
                                             />
 
                                             <p className="mb-2 font-medium text-sm text-center">
-                                                {index + 0} Volunteers
+                                                {current.labels?.[index] ?? `${index} VOLUNTEERS`}
                                             </p>
                                         </div>
                                     ))}
