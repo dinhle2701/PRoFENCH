@@ -39,34 +39,38 @@ const Header = () => {
                         {
                             label: "Paper",
                             icon: <FaRegFilePdf />,
-
+                            href: "#",
                         },
                         {
                             label: "arXiv",
                             icon: <SiArxiv />,
+                            href: "#",
                         },
                         {
                             label: "Video",
                             icon: <FaYoutube />,
-                            href: "https://youtu.be/7X9_TIlNBb0"
+                            href: "https://youtu.be/7X9_TIlNBb0",
                         },
                         {
                             label: "Data",
                             icon: <FaRegImages />,
+                            href: "https://github.com/cvwifi-lab/WiVi32-A_People_Counting_Tool",
                         },
                     ].map((item, index) => (
-                        <button
+                        <a
                             key={index}
-                            className="flex items-center justify-center gap-2 w-[130px] h-[44px] 
-                 bg-black text-white text-sm font-medium 
-                 rounded-full transition 
-                 hover:bg-gray-800 hover:cursor-pointer"
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 w-[130px] h-[44px]
+      bg-black text-white text-sm font-medium
+      rounded-full transition
+      hover:bg-gray-800 hover:cursor-pointer"
                         >
                             {item.icon}
                             <span>{item.label}</span>
-                        </button>
+                        </a>
                     ))}
-
                 </div>
             </div>
             <div className="credibility">
