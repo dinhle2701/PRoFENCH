@@ -59,7 +59,9 @@ const DatasetTabs = () => {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`pb-2 px-8 font-medium transition
+                            className={`
+                                hover:cursor-pointer
+                                pb-2 px-8 font-medium transition
               ${activeTab === tab.id
                                     ? "border-b-2 border-black text-black"
                                     : "text-gray-500"

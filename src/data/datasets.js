@@ -4,6 +4,8 @@ export const datasets = [
     {
         id: 1,
         name: "Counting People RGB",
+        layout: `${base}/datasets/Counting People RGB/background/Quality Restoration-Ultra HD-01.png`,
+        expSetup: `${base}/datasets/Counting People RGB/background/Quality Restoration-Ultra HD-02.jpeg`,
         labels: [
             "0 VOLUNTEERS",
             "1 VOLUNTEERS",
@@ -39,6 +41,8 @@ export const datasets = [
     {
         id: 2,
         name: "Counting People IR",
+        layout: `${base}/datasets/Counting People IR/background/Quality Restoration-Ultra HD-setup-roomb.png`,
+        expSetup: `${base}/datasets/Counting People IR/background/ExperimentSetup.jpg`,
         labels: [
             "0 VOLUNTEERS",
             "1 VOLUNTEERS",
@@ -68,15 +72,17 @@ export const datasets = [
     {
         id: 3,
         name: "Human Activity RGB",
+        layout: `${base}/datasets/Counting People RGB/background/`,
+        expSetup: `${base}/datasets/Human Activity RGB/background/ExperimentSetup.jpg`,
         labels: [
-            "Đứng",
-            "Kéo ghế",
-            "Không hành động",
-            "Nằm",
-            "Ngã",
-            "Ngồi",
-            "Nhặt đồ",
-            "Vẫy tay",
+            "Standing",
+            "Pulling a chair",
+            "No action",
+            "Lying",
+            "Falling",
+            "Sitting",
+            "Picking up an object",
+            "Waving hand",
         ],
         cv: [
             `${base}/datasets/Human Activity RGB/cv/Dung.mp4`,
