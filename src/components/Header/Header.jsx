@@ -39,12 +39,12 @@ const Header = () => {
                         {
                             label: "Paper",
                             icon: <FaRegFilePdf />,
-                            href: "#",
+                            href: "",
                         },
                         {
                             label: "arXiv",
                             icon: <SiArxiv />,
-                            href: "#",
+                            href: "",
                         },
                         {
                             label: "Video",
