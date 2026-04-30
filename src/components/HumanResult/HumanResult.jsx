@@ -49,7 +49,7 @@ const HumanResult = () => {
     return (
         <div className="dataset container-size text-black" id="human_result">
             <h2 className="text-2xl font-bold mt-12 text-center">
-                Human Pose Estimation Result
+                We provide the visualization human counting in the frame level
             </h2>
 
             <div className="max-w-[1200px] mx-auto mt-10">

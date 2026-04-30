@@ -56,7 +56,7 @@ const Fusion = () => {
                                 <img
                                     src={fusion[selectedIndex]?.architecture}
                                     alt=""
-                                    className="w-full max-w-[520px] rounded-lg shadow mb-4"
+                                    className="w-620 h-50 max-w-[520px] rounded-lg shadow mb-4"
                                 />
                             </div>
 
@@ -64,21 +64,12 @@ const Fusion = () => {
                             <div className="flex flex-col items-center">
                                 <h4 className="font-bold mb-3">Detail</h4>
 
-                                <div className="
-            text-sm text-gray-700 whitespace-pre-line
-            bg-gray-50 rounded-lg shadow-sm
-            px-6 py-4
-            w-full max-w-[420px]
-            text-left
-        ">
+                                <div className=" text-sm text-gray-700 whitespace-pre-line bg-gray-50 rounded-lg shadow-sm px-6 py-4 w-full max-w-[420px] text-left">
                                     {fusion[selectedIndex]?.details}
                                 </div>
 
                                 {/* Parameters */}
-                                <div className="
-            mt-4 text-sm font-medium text-gray-800
-            bg-white border rounded-lg px-4 py-2 shadow-sm
-        ">
+                                <div className="mt-4 text-sm font-medium text-gray-800 bg-gray-50 rounded-lg px-4 py-2 shadow-sm">
                                     Parameters: {fusion[selectedIndex]?.parameters}
                                 </div>
                             </div>
@@ -87,6 +78,18 @@ const Fusion = () => {
                     </div>
                 )}
 
+                {/* <div>
+                    Parameters model
+                    <div className="mt-4 text-sm font-medium text-gray-800 bg-gray-50 rounded-lg px-4 py-2 shadow-sm">
+                        <p>
+                            Model (WiVi32-Fusion)
+                        </p>
+
+                        <p>
+                            Parameters: {fusion.find(f => f.id === 10)?.parameters}
+                        </p>
+                    </div>
+                </div> */}
             </div>
         </div>
     )

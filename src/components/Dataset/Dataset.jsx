@@ -49,8 +49,9 @@ const DatasetTabs = () => {
 
     return (
         <div className="dataset container-size text-black" id="datasetTabs">
-            <h2 className="text-2xl font-bold mt-12 text-center">Dataset</h2>
+            <h2 className="text-2xl font-bold mt-12 text-center">Datasets</h2>
 
+            {/* <img width={520} height={50} src="/PRoFENCH/image/Quality Restoration-Ultra HD-Multi.png" alt="training-configuration" className="mx-auto mt-8" /> */}
             <div className="max-w-[1500px] mx-auto mt-10">
 
                 {/* Tabs */}
