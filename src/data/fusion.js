@@ -4,7 +4,7 @@ export const fusion = [
     {
         id: 1,
         name: "1. Element-Wise Fusion",
-        architecture: `${base}/image/architect/Element-wise.png`,
+        architecture: `${base}/image/architect/Element-wise.avif`,
         details: "MAE  : 0.0561 \n MSE  : 0.0230 \n RMSE : 0.1140 \n MAPE : 1.7371% \nR²   : 0.9976",
         parameters: "393, 825",
     },
@@ -18,21 +18,21 @@ export const fusion = [
     {
         id: 3,
         name: "3. Early Fusion",
-        architecture: `${base}/image/architect/Early.png`,
+        architecture: `${base}/image/architect/Early.jpg`,
         details: "MAE  : 0.0680 \n MSE  : 0.0228 \n RMSE : 0.1512 \n MAPE : 2.4790% \n R²   : 0.9957",
         parameters: "636,101",
     },
     {
         id: 4,
         name: "4. Attention-Based Fusion",
-        architecture: `${base}/image/architect/Early.png`,
+        architecture: `${base}/image/architect/Attention.jpg`,
         details: "MAE  : 0.0750\n MSE  : 0.0185\n RMSE : 0.1359\n MAPE : 2.7782%\n R²   : 0.9965",
         parameters: "1,743,777",
     },
     {
         id: 5,
         name: "5. Constraint-Based Fusion",
-        architecture: `${base}/image/architect/Early.png`,
+        architecture: `${base}/image/architect/Constraint.jpg`,
         details: "MAE  : 0.3445\n MSE  : 0.1759\n RMSE : 0.4195\n MAPE : 8.9592%\n R²   : 0.9668",
         parameters: "628,625",
     },

@@ -1,4 +1,5 @@
-const base = "https://profench-paper-s3-bucket.s3.us-east-1.amazonaws.com/public"
+// const base = "https://profench-paper-s3-bucket.s3.us-east-1.amazonaws.com/public"
+const base = "https://d1g0d7f1m0o7k8.cloudfront.net/public"
 
 export const datasets = [
     {
