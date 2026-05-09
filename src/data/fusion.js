@@ -11,14 +11,14 @@ export const fusion = [
     {
         id: 2,
         name: "2. GenNN Fusion",
-        architecture: `${base}/image/architect/GenNN.png`,
+        architecture: `${base}/image/architect/GenNN.avif`,
         details: "MAE  : 0.0617\n MSE  : 0.0215\n RMSE : 0.1467\n MAPE : 3.3590%\n R²   : 0.9959",
         parameters: "491,281",
     },
     {
         id: 3,
         name: "3. Early Fusion",
-        architecture: `${base}/image/architect/Early.jpg`,
+        architecture: `${base}/image/architect/Early.avif`,
         details: "MAE  : 0.0680 \n MSE  : 0.0228 \n RMSE : 0.1512 \n MAPE : 2.4790% \n R²   : 0.9957",
         parameters: "636,101",
     },
