@@ -16,8 +16,8 @@ const Intro = () => {
                 src={figureMap[1]?.url}
                 alt="PRoFENCH Framework"
                 className="mx-auto mt-8"
-            // loading="lazy"
-            // decoding="async"
+                loading="eager"
+                decoding="async"
             />
             <p className='text-center'>Figure 1: Architecture of the proposed <b>PRoFENCH</b> multimodal WiFi–Vision sensing framework.</p>
         </div>
