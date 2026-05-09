@@ -26,20 +26,20 @@ export const figure = [
         id: 4,
         name: "Figure 5: Software architecture and data flow between ESP32 devices, laptops, backend processing, and the React Native frontend.",
         type: "Sensor Platform",
-        url: `${base}/image/Quality Restoration-Ultra HD-SoftwareArchitect.avif`,
+        url: `${base}/image/Quality-Restoration-Ultra-HD-SoftwareArchitect.avif`,
     },
 
     {
         id: 5,
         name: "Figure 6: Packet loss rate of ESP32 communication under varying distances and environments. Indoor environments maintain stable communication performance, while outdoor environments exhibit rapid degradation due to signal attenuation and environmental factors.",
         type: "Sensor Platform",
-        url: `${base}/image/Quality Restoration-Ultra HD-esp32_packet_loss.avif`,
+        url: `${base}/image/Quality-Restoration-Ultra-HD-esp32_packet_loss.avif`,
     },
     {
         id: 6,
         name: "Figure 7: Visualization of the WiVi32-Count dataset across eight classes, showing Wi-Fi CSI signals (top) paired with corresponding camera images (bottom).",
         type: "Sensor Platform",
-        url: `${base}/image/Quality Restoration-Ultra HD-Multi.avif`,
+        url: `${base}/image/Quality-Restoration-Ultra-HD-Multi.avif`,
     },
 
 ]
