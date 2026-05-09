@@ -64,54 +64,34 @@ export default function Home() {
 
       {/* Introduction */}
       <Intro />
-      <Section>
-      </Section>
 
 
       {/* Abstract */}
       <Abstract />
-      <Section>
-      </Section>
 
       {/* Mục 1 - Datasets */}
       <DatasetTabs />
-      <Section>
-      </Section>
 
       {/* Mục 2 - Fusion Strategy */}
       <Fusion />
-      <Section>
-      </Section>
 
       {/* Mục 3 - WiVi32-Fusion Architect */}
       <Architect />
-      <Section>
-      </Section>
 
       {/* Mục 4 - Sensor Platform */}
       <SensorPlatform />
-      <Section>
-      </Section>
 
       {/* Mục 5 - We provide the visualization human counting in the frame level */}
       <HumanResult />
-      <Section>
-      </Section>
 
       {/* Mục 6 - Related Links */}
       <RelatedLink />
-      <Section>
-      </Section>
 
       {/* Mục 7 */}
       <License />
-      <Section>
-      </Section>
 
       {/* Mục 8 */}
       <Citation />
-      <Section>
-      </Section>
 
       {/* Footer */}
       <Footer />

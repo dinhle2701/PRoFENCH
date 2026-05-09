@@ -6,7 +6,7 @@ const Architect = () => {
         figure.map(f => [f.id, f])
     );
     return (
-        <div className='methodology container-size mt-12' id='architect'>
+        <div className='methodology container-size mt-12 scroll-mt-24' id='architect'>
             <h2 className='text-2xl text-black font-bold mt-12'>WiVi32-Fusion Architect</h2>
 
             <div className="overall-architecture">

@@ -11,7 +11,7 @@ const Header = () => {
     const doc = documents[0]
 
     return (
-        <div className='text-black text-center container-size' id='header'>
+        <div className='text-black text-center container-size h-dvh' id='header'>
             <div className="title my-12">
                 <h1 className='text-4xl font-bold'>{doc.name}</h1>
             </div>

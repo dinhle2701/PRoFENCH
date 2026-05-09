@@ -31,7 +31,7 @@ const SensorPlatform = () => {
 
 
     return (
-        <div className='sensor-platform container-size mt-12' id="sensor_platform">
+        <div className='sensor-platform container-size mt-12 scroll-mt-24' id="sensor_platform">
             <h2 className='text-2xl text-black font-bold'>Sensor Platform</h2>
 
             {/* Fusion */}

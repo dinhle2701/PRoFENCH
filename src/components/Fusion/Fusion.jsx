@@ -26,7 +26,7 @@ const Fusion = () => {
 
 
     return (
-        <div className="dataset container-size text-black mb-3" id="fusion">
+        <div className="dataset container-size text-black mb-3 scroll-my-24" id="fusion">
             <h2 className='text-2xl text-black font-bold mt-12'>Fusion Strategy</h2>
 
             <div className="max-w-[1200px] mx-auto mt-10">
