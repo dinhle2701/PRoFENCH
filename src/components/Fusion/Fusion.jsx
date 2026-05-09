@@ -13,6 +13,13 @@ const Fusion = () => {
         setSelectedIndex(0)
     }, [activeTab])
 
+    useEffect(() => {
+        fusion.forEach((item) => {
+            const img = new Image()
+            img.src = item.architecture
+        })
+    }, [])
+
     const cvRef = useRef(null)
     const csiRef = useRef(null)
 

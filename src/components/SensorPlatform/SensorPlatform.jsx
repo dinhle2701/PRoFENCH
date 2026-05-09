@@ -14,6 +14,17 @@ const SensorPlatform = () => {
         setSelectedIndex(0)
     }, [activeTab])
 
+    useEffect(() => {
+        datasets.forEach((item) => {
+            [item.layout, item.expSetup].forEach((src) => {
+                if (!src) return
+
+                const img = new Image()
+                img.src = src
+            })
+        })
+    }, [])
+
     const figureMap = Object.fromEntries(
         figure.map(f => [f.id, f])
     );
