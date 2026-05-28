@@ -73,7 +73,7 @@ export const datasets = [
     {
         id: 3,
         name: "Human Activity RGB",
-        layout: `${base}/datasets/Counting People RGB/background/`,
+        layout: `${base}/datasets/Counting People RGB/background/Quality Restoration-Ultra HD-03.avif`,
         expSetup: `${base}/datasets/Human Activity RGB/background/ExperimentSetup.jpg`,
         labels: [
             "Standing",
