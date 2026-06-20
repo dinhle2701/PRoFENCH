@@ -13,6 +13,7 @@ import DatasetTabs from '@/components/Dataset/Dataset';
 import Architect from '@/components/Architect/Architect';
 import HumanResult from '@/components/HumanResult/HumanResult';
 import Fusion from '@/components/Fusion/Fusion';
+import CompareCVCSI from '@/components/HumanResult/CompareCVCSI';
 
 export default function Home() {
   useEffect(() => {
@@ -83,6 +84,9 @@ export default function Home() {
 
       {/* Mục 5 - We provide the visualization human counting in the frame level */}
       <HumanResult />
+
+      {/* Mục so sánh package CSI - CV */}
+      <CompareCVCSI />
 
       {/* Mục 6 - Related Links */}
       <RelatedLink />
