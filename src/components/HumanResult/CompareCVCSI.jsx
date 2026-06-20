@@ -184,10 +184,10 @@ const CompareCVCSI = () => {
                         <table className="w-full border-collapse">
                             <thead className="sticky top-0 bg-gray-100 z-10">
                                 <tr>
-                                    <th className="border px-4 py-2 text-left">
+                                    <th className="border px-4 py-2 text-center">
                                         ImageName
                                     </th>
-                                    <th className="border px-4 py-2 text-left">
+                                    <th className="border px-4 py-2 text-center">
                                         ID (CSV)
                                     </th>
                                     <th className="border px-4 py-2 text-center">
@@ -220,10 +220,10 @@ const CompareCVCSI = () => {
                                             }
                                         }}
                                     >
-                                        <td className="border px-4 py-2">
+                                        <td className="border px-4 py-2 text-center">
                                             {item.imageName}
                                         </td>
-                                        <td className="border px-4 py-2">
+                                        <td className="border px-4 py-2 text-center">
                                             {item.csvId}
                                         </td>
                                         <td className="border px-4 py-2 text-center">
